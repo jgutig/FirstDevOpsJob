@@ -27,3 +27,9 @@ steps:
     backendAWSBucketName: 'aforo255-terraform-backend'
     backendAWSKey: 'kubernetes-dev-tfstate'
 
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'aws'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/aws/kubernetes'
+    environmentServiceNameAWS: 'AWS-S3-TERRAFORM'
