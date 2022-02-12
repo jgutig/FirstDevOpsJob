@@ -3,8 +3,8 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-#trigger:
-#- main
+trigger:
+- main
 
 pool:
   vmImage: ubuntu-latest
@@ -26,3 +26,4 @@ steps:
     backendServiceAWS: 'AWS-S3-TERRAFORM'
     backendAWSBucketName: 'aforo255-terraform-backend'
     backendAWSKey: 'kubernetes-dev-tfstate'
+
